@@ -5,8 +5,9 @@ import { CheckCircle } from 'lucide-react'
 
 const About = () => {
   useEffect(()=>{
-    scroll(0,0);
+    window.scrollTo(0,0);
   },[])
+
   return (
     <div className="bg-white text-gray-800 font-sans">
       <Navbar />

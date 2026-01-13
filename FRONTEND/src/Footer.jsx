@@ -1,4 +1,5 @@
 import React from 'react'
+import { HashLink } from "react-router-hash-link";
 import {NavLink} from "react-router-dom";
 import Logo from "./assets/footer-logo.png";
 
@@ -49,9 +50,9 @@ const Footer = () => {
                             <ul className="space-y-3">
                                 {section.links.map((link, j) => (
                                     <li key={j}>
-                                        <NavLink to={link.href} className="text-gray-400 hover:text-white transition-colors">
+                                        <HashLink to={link.href} className="text-gray-400 hover:text-white transition-colors">
                                             {link.label}
-                                        </NavLink>
+                                        </HashLink>
                                     </li>
                                 ))}
                             </ul>

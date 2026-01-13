@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react'
-import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import Logo from "./assets/logo.png";
 
 const Navbar = () => {
@@ -11,6 +11,8 @@ const Navbar = () => {
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
         "Hi, I visited the Vexora Solutions website and want to discuss a project."
     )}`;
+
+
     return (
         <nav className="p-2 sticky top-0 z-50 bg-white" >
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -20,14 +22,14 @@ const Navbar = () => {
 
                 <div className="hidden md:flex items-center space-x-10 text-sm font-bold">
                     {["Home", "Services", "Process", "About", "Contact"].map((item) => (
-                        <NavLink
+                        <HashLink
                             key={item}
                             to={`${item.toLowerCase() == "about" ? "/" + item.toLowerCase() : "/#" + item.toLowerCase()}`}
                             className="text-gray-600 hover:text-gray-900 transition-colors duration-200 relative group"
                         >
                             {item}
                             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gray-900 group-hover:w-full transition-all duration-300"></span>
-                        </NavLink>
+                        </HashLink>
                     ))}
                 </div>
 
@@ -50,14 +52,14 @@ const Navbar = () => {
                 menuOpen && (
                     <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4">
                         {["Services", "Process", "Work", "About", "Contact"].map((item) => (
-                            <NavLink
+                            <HashLink
                                 key={item}
                                 to={`${item.toLowerCase() == "about" ? "/" + item.toLowerCase() : "/#" + item.toLowerCase()}`}
                                 className="block py-2 text-gray-700 hover:text-gray-900 transition-colors"
                                 onClick={() => setMenuOpen(false)}
                             >
                                 {item}
-                            </NavLink>
+                            </HashLink>
                         ))}
                     </div>
                 )

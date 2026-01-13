@@ -51,6 +51,7 @@ Message: ${formData.message}
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
         "Hi, I visited the Vexora Solutions website and want to discuss a project."
     )}`;
+    
 
     return (
         <div className="bg-white text-gray-800 font-sans">
