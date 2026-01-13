@@ -17,6 +17,8 @@ import {
 } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { NavLink } from "react-router-dom";
+import HeroSection from "./assets/hero-section-img.png";
 
 const Home = () => {
     const [formData, setFormData] = useState({
@@ -92,7 +94,7 @@ Message: ${formData.message}
                     {/* RIGHT IMAGE */}
                     <div className="flex justify-center lg:justify-end">
                         <img
-                            src="./hero-section-img.png"
+                            src={HeroSection}
                             alt="Vexora Solutions – Digital Systems"
                             className="w-full max-w-md lg:max-w-lg"
                         />
@@ -127,14 +129,14 @@ Message: ${formData.message}
                                     {s.title}
                                 </h3>
                                 <p className="text-gray-600 mb-4">{s.description}</p>
-                                <a
-                                    href={whatsappLink}
+                                <NavLink
+                                    to={whatsappLink}
                                     target="_blank"
                                     className="inline-flex items-center text-sm font-medium text-gray-700 hover:text-gray-900"
                                 >
                                     Discuss on WhatsApp
                                     <ChevronRight size={16} className="ml-1" />
-                                </a>
+                                </NavLink>
                             </div>
                         ))}
                     </div>
@@ -201,12 +203,12 @@ Message: ${formData.message}
                                     {item.title}
                                 </h3>
                                 <p className="text-gray-700 mb-6">{item.price}</p>
-                                <a
-                                    href={whatsappLink}
+                                <NavLink
+                                    to={whatsappLink}
                                     className="inline-flex items-center justify-center w-full border border-gray-300 py-3 rounded-md hover:bg-gray-50 transition"
                                 >
                                     Get Pricing on WhatsApp
-                                </a>
+                                </NavLink>
                             </div>
                         ))}
                     </div>

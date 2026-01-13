@@ -1,7 +1,8 @@
 import React from 'react'
+import {NavLink} from "react-router-dom";
+import Logo from "./assets/footer-logo.png";
 
 const Footer = () => {
-
     const footerSections = [
         {
             title: "Services",
@@ -35,7 +36,7 @@ const Footer = () => {
                 <div className="grid md:grid-cols-4 gap-10 mb-12">
                     <div>
                         <div className="flex items-center space-x-2 mb-6">
-                            <img src="./footer-logo.png" alt="Logo" className="w-24" />
+                            <img src={Logo} alt="Logo" className="w-24" />
                         </div>
                         <p className="text-gray-400">
                             Building reliable digital systems with a focus on quality and scalability.
@@ -48,9 +49,9 @@ const Footer = () => {
                             <ul className="space-y-3">
                                 {section.links.map((link, j) => (
                                     <li key={j}>
-                                        <a href={link.href} className="text-gray-400 hover:text-white transition-colors">
+                                        <NavLink to={link.href} className="text-gray-400 hover:text-white transition-colors">
                                             {link.label}
-                                        </a>
+                                        </NavLink>
                                     </li>
                                 ))}
                             </ul>
