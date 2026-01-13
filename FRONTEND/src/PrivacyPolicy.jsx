@@ -3,6 +3,9 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   return (
     <div className="bg-white text-gray-800 font-sans">
       <Navbar />
