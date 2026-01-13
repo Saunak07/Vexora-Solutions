@@ -1,6 +1,6 @@
 import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react'
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "./assets/logo.png";
 
 const Navbar = () => {
@@ -49,10 +49,10 @@ const Navbar = () => {
             {
                 menuOpen && (
                     <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4">
-                        {["Services", "Process", "Work", "Contact"].map((item) => (
+                        {["Services", "Process", "Work", "About", "Contact"].map((item) => (
                             <NavLink
                                 key={item}
-                                to={`#${item.toLowerCase()}`}
+                                to={`${item.toLowerCase() == "about" ? "/" + item.toLowerCase() : "/#" + item.toLowerCase()}`}
                                 className="block py-2 text-gray-700 hover:text-gray-900 transition-colors"
                                 onClick={() => setMenuOpen(false)}
                             >

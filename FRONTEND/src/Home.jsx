@@ -81,13 +81,6 @@ Message: ${formData.message}
                             >
                                 Request Demo
                             </button>
-
-                            <button
-                                onClick={() => window.open(whatsappLink, "_blank")}
-                                className="border border-gray-300 px-8 py-4 rounded-md hover:bg-gray-50"
-                            >
-                                Contact Us
-                            </button>
                         </div>
                     </div>
 
@@ -266,10 +259,6 @@ Message: ${formData.message}
                             className="bg-white text-gray-900 px-10 py-4 rounded-md"
                         >
                             Start Your Project
-                        </button>
-
-                        <button className="border border-gray-600 px-10 py-4 rounded-md hover:bg-gray-800 transition-colors duration-200 text-sm font-medium">
-                            Schedule a Call
                         </button>
                     </div>
                 </div>
