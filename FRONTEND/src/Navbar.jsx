@@ -51,7 +51,7 @@ const Navbar = () => {
             {
                 menuOpen && (
                     <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-4">
-                        {["Services", "Process", "Work", "About", "Contact"].map((item) => (
+                        {["Home", "Services", "Process", "About", "Contact"].map((item) => (
                             <HashLink
                                 key={item}
                                 to={`${item.toLowerCase() == "about" ? "/" + item.toLowerCase() : "/#" + item.toLowerCase()}`}
